@@ -2,13 +2,13 @@ import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
 import mongoose from "mongoose";
+import dotenv from "dotenv";
 
 import posts from "./routers/posts.js";
+dotenv.config();
 
 const PORT = process.env.PORT || 5000;
-
-const URI_DB =
-  "mongodb+srv://khoinguyen2000bg:123456789aA%40@mern-app.j110qj0.mongodb.net/";
+const URI_DB = process.env.URI_DB;
 
 const app = express();
 app.use(bodyParser.json());
