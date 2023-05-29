@@ -9,3 +9,7 @@ export const fetchPosts = () => {
 export const createPost = (payload) => {
   return axios.post(`${URL}/posts/create`, payload);
 };
+
+export const updatePost = (payload) => {
+  return axios.post(`${URL}/posts/${payload._id}`, payload);
+};
